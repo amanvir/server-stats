@@ -1,6 +1,8 @@
 Data = new Mongo.Collection('data');
 if(Meteor.isClient){
 
+  Meteor.subscribe('data');
+
   Template.home.events({
     'click #start': function(){
       Meteor.call('grabCpu');
