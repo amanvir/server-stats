@@ -1,0 +1,29 @@
+/* CSS declarations go here */
+body{
+  margin:20px;
+  font-family:Verdana;
+}
+
+.cpu_data{
+  display:block;
+  float:left;
+  width:48%;
+  margin:1%;
+  object-fit:cover;
+  background-color:#f1f1f1;
+}
+
+.cpu_inner{
+  padding:20px;
+}
+
+li{
+  padding:5px 0;
+  font-size:8pt;
+}
+
+hr{
+  border:0;
+  height:1px;
+  background-color:#eee;
+}

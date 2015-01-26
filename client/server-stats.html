@@ -1,0 +1,31 @@
+<head>
+  <title>Server Stats</title>
+</head>
+
+<body>
+  {{> home}}
+</body>
+
+<template name="home">
+  <div style="margin:1%;margin-bottom:20px;">
+    <h1>Server Stats</h1> {{data_collected}} seconds of data collected
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="clear">Clear</button>
+    <hr>
+  </div>
+  {{#each list_data}}
+    {{#each cpu_data}}
+    <div class="cpu_data">
+      <div class="cpu_inner">
+        <h5>{{model}}</h5>
+        <li><i>Fake Usage</i>: {{cpu_usage}}%</li>
+        <li>User Time: {{times.user}}</li>
+        <li>Sys Time: {{times.sys}}</li>
+        <li>Idle Time: {{times.idle}}</li>
+        <li>Speed: {{speed}}</li>
+      </div>
+    </div>
+    {{/each}}
+  {{/each}}
+</template>
